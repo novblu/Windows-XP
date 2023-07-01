@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans";
 }
 
 .hide {
@@ -15,6 +15,7 @@ html {
 .main-desktop {
   width: 100%;
   height: 100vh;
+  display: flex;
   background-image: url(../img/wallpaper.jpg);
   background-size: cover;
 }
@@ -37,6 +38,104 @@ html {
   font-size: 0.7rem;
 }
 
+.app-border {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgb(0, 88, 238) 0%, rgb(53, 147, 255) 4%, rgb(40, 142, 255) 6%, rgb(18, 125, 255) 8%, rgb(3, 111, 252) 10%, rgb(2, 98, 238) 14%, rgb(0, 87, 229) 20%, rgb(0, 84, 227) 24%, rgb(0, 85, 235) 56%, rgb(0, 91, 245) 66%, rgb(2, 106, 254) 76%, rgb(0, 98, 239) 86%, rgb(0, 82, 214) 92%, rgb(0, 64, 171) 94%, rgb(0, 48, 146) 100%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.app-border .app-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-border .app-name .app-name-img {
+  height: 100%;
+  padding: 2px;
+}
+.app-border .app-name .app-name-para {
+  font-weight: 700;
+  line-height: 25px;
+  text-shadow: rgb(0, 0, 0) 1px 1px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.app-border .app-buttons {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 10px;
+}
+.app-border .app-buttons .header_button {
+  margin: 2px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+.app-border .app-buttons .header_button-min,
+.app-border .app-buttons .header_button-max {
+  box-shadow: #4646ff 0px -1px 2px 1px inset;
+  background-image: radial-gradient(circle at 90% 90%, rgb(0, 84, 233) 0%, rgb(34, 99, 213) 55%, rgb(68, 121, 228) 70%, rgb(163, 187, 236) 90%, white 100%);
+}
+.app-border .app-buttons .header_button-close {
+  content: "";
+  box-shadow: #da4600 0px -1px 2px 1px inset;
+  background-image: radial-gradient(circle at 90% 90%, rgb(204, 70, 0) 0%, rgb(220, 101, 39) 55%, rgb(205, 117, 70) 70%, rgb(255, 204, 178) 90%, white 100%);
+}
+
+.app-nav .app-top-nav,
+.app-nav .app-mid-nav {
+  background-color: #ede8d0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1490196078);
+}
+.app-nav .app-top-nav {
+  width: 100%;
+  height: 20px;
+}
+.app-nav .app-top-nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 4px;
+  font-size: 0.7rem;
+}
+.app-nav .app-top-nav a:hover {
+  background-color: #4646ff;
+  color: #fff;
+}
+.app-nav .app-mid-nav {
+  display: flex;
+  height: 30px;
+  padding: 2px;
+}
+.app-nav .app-mid-nav .arrows,
+.app-nav .app-mid-nav .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-nav .app-mid-nav .arrows {
+  padding: 2px;
+}
+.app-nav .app-mid-nav img {
+  max-height: 90%;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.app-nav .app-mid-nav .separator {
+  height: 90%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0px 2px;
+}
+
 .internet-exp {
   height: 300px;
   width: 600px;
@@ -45,63 +144,9 @@ html {
   background-color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-}
-.internet-exp .exp-border {
-  width: 100%;
-  height: 25px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #0055e6;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.internet-exp .exp-border .app-buttons {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-right: 10px;
-}
-.internet-exp .exp-border .app-buttons .header_button {
-  margin: 2px;
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 3px;
-}
-.internet-exp .exp-border .app-buttons .header_button-min {
-  box-shadow: rgb(70, 70, 255) 0px -1px 2px 1px inset;
-  background-image: radial-gradient(circle at 90% 90%, rgb(0, 84, 233) 0%, rgb(34, 99, 213) 55%, rgb(68, 121, 228) 70%, rgb(163, 187, 236) 90%, white 100%);
-}
-.internet-exp .exp-border .app-buttons .header_button-max {
-  box-shadow: rgb(70, 70, 255) 0px -1px 2px 1px inset;
-  background-image: radial-gradient(circle at 90% 90%, rgb(0, 84, 233) 0%, rgb(34, 99, 213) 55%, rgb(68, 121, 228) 70%, rgb(163, 187, 236) 90%, white 100%);
-}
-.internet-exp .exp-border .app-buttons .header_button-close {
-  position: relative;
-  box-shadow: rgb(218, 70, 0) 0px -1px 2px 1px inset;
-  background-image: radial-gradient(circle at 90% 90%, rgb(204, 70, 0) 0%, rgb(220, 101, 39) 55%, rgb(205, 117, 70) 70%, rgb(255, 204, 178) 90%, white 100%);
-}
-.internet-exp .exp-border .app-buttons .header_button-close::after {
-  background-color: #fff;
-  width: 15px;
-  height: 3px;
-  top: 50%;
-  left: 50%;
-}
-.internet-exp .exp-nav .app-top-nav {
-  width: 100%;
-  height: 20px;
-  background-color: #ede8d0;
-}
-.internet-exp .exp-nav .app-top-nav a {
-  color: #000;
-  text-decoration: none;
-  padding: 4px;
-  font-size: 0.7rem;
-}
-.internet-exp .exp-nav .app-top-nav a:hover {
-  background-color: #4646ff;
-  color: #fff;
+  border-left: 3px solid #0831d9;
+  border-right: 3px solid #0831d9;
+  border-bottom: 3px solid #0831d9;
 }
 
 .bottom-taskbar {
@@ -136,7 +181,7 @@ html {
   align-self: flex-start;
   display: flex;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   height: 60px;
   padding: 6px 5px 5px;
   width: 100%;
@@ -159,36 +204,27 @@ html {
 }
 .bottom-taskbar .left .start-menu .menu section {
   width: 100%;
-  height: 100%;
-  max-height: 400px;
+  height: 400px;
   display: flex;
   justify-content: space-between;
 }
 .bottom-taskbar .left .start-menu .menu section .menu_left {
-  background-color: rgb(255, 255, 255);
-  padding: 6px 5px 0px;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 .bottom-taskbar .left .start-menu .menu section .menu_right {
-  background-color: rgb(203, 227, 255);
-  border-left: 1px solid rgba(58, 58, 255, 0.37);
-  padding: 6px 5px 5px;
+  background-color: #cbe3ff;
+  border-left: 1px solid rgba(58, 58, 255, 0.368627451);
   width: 50%;
   color: rgb(0, 19, 107);
 }
 .bottom-taskbar .left .start-menu .menu footer {
   display: flex;
-  align-self: flex-end;
-  align-items: center;
-  justify-content: flex-end;
-  color: rgb(255, 255, 255);
   height: 40px;
   width: 100%;
+  color: #ffffff;
   background: linear-gradient(rgb(66, 130, 214) 0%, rgb(59, 133, 224) 3%, rgb(65, 138, 227) 5%, rgb(65, 138, 227) 17%, rgb(60, 135, 226) 21%, rgb(55, 134, 228) 26%, rgb(52, 130, 227) 29%, rgb(46, 126, 225) 39%, rgb(35, 116, 223) 49%, rgb(32, 114, 219) 57%, rgb(25, 110, 219) 62%, rgb(23, 107, 216) 72%, rgb(20, 104, 213) 75%, rgb(17, 101, 210) 83%, rgb(15, 97, 203) 88%);
-}
-.bottom-taskbar .left .start-menu .hide {
-  display: none;
 }
 .bottom-taskbar .left .img-start {
   height: 100%;

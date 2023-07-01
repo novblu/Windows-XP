@@ -10,7 +10,11 @@
 </head>
 
 <body>
+
+<!-- TASKBAR -->
+
     <nav class="bottom-taskbar">
+
         <div class="taskbar-items left">
             <div class="start-menu">
                 <div class="menu hide">
@@ -31,6 +35,7 @@
             </div>
             <img class="img-start" src="./img/start.png" alt="">
         </div>
+        
         <div class="taskbar-items right">
             <div class="clock">
                 <span class="hrs">00</span>
@@ -41,6 +46,8 @@
     </nav>
 
 
+<!-- DESKTOP -->
+
     <header class="main-desktop">
         <div class="icon-table">
             <div class="icon-item icon-item-explor">
@@ -48,7 +55,7 @@
                 <p>Internet Explorer</p>
             </div>
             <div class="icon-item">
-              <img src="./img/explorer.exe_14_252-4.png" alt="">
+                <img src="./img/explorer.exe_14_252-4.png" alt="">
                 <p>Folder</p>
             </div>
             <div class="icon-item">
@@ -62,16 +69,21 @@
         </div>
 
 
-        <div class="internet-exp hide">
-            <div class="exp-border" id="appHeader">
-                <div class="app-name"></div>
+<!-- INTERNET EXPLORER APP -->
+
+        <div class="internet-exp ">
+            <div class="app-border" id="appHeader">
+                <div class="app-name">
+                    <img class="app-name-img" src="./img/explorer.png" alt="">
+                    <p class="app-name-para">Internet Explorer</p>
+                </div>
                 <div class="app-buttons">
                     <button class="header_button header_button-min"></button>
                     <button class="header_button header_button-max"></button>
                     <div class="header_button header_button-close"></div>
                 </div>
             </div>
-            <div class="exp-nav">
+            <div class="app-nav">
                 <div class="app-top-nav">
                     <a href="">File</a>
                     <a href="">Edit</a>
@@ -80,11 +92,35 @@
                     <a href="">Tools</a>
                     <a href="">Help</a>
                 </div>
-                <div class="app-mid-nav"></div>
-                <div class="bottom"></div>
+                <div class="app-mid-nav">
+                    <div class="arrows">
+                        <img src="./img/xp-arrow-icon-previous.png" alt="">
+                        <p>Back</p>
+                        <img src="./img/xp-arrow-icon-next.png" alt="">
+                    </div>
+                    <div class="separator"></div>
+                    <img src="./img/refresh-ie.png" alt="">
+                    <img src="./img/refresh2-ie.png" alt="">
+                    <div class="separator"></div>
+                    <div class="search">
+                        <img src="./img/pobrane.png" alt="">
+                        <p>Search</p>
+                    </div>
+                </div>
+                <div class="app-bottom-nav">
+
+                </div>
             </div>
             <div class="exp-section"></div>
         </div>
+
+
+
+
+
+
+
+
     </header>
 </body>
 <script src="./js/script.js"></script>

@@ -27,35 +27,40 @@ const showMenu = () => {
 }
 
 
-// Draggable App *BUGGED AF*
-
+// Draggable App *BUGGED*
+                                                                        
 let x = 0;
 let y = 0;
+let active =true
 
 const mouseDownHandler = function (e) {
-    x = e.clientX;
-    y = e.clientY;
+    x = e.offsetX;
+    y = e.offsetY;
+ 
 
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
+  if(active === true) {
+        document.addEventListener('mousemove', mouseMoveHandler);
+  } 
+   
+    
 };
 
 const mouseMoveHandler = function (e) {
     const dx = e.clientX - x;
     const dy = e.clientY - y;
 
-    // Element.style.top = `${Element.offsetTop + dy}px`; WTFFFFFFFFFFFFFF!!!!!
-    Element.style.left = `${Element.offsetLeft + dx}px`;
-    x = e.clientX;
-    y = e.clientY;
+    Element.style.top = `${dy}px`; 
+    Element.style.left = `${dx}px`;
+ 
 };
 
-const mouseUpHandler = function () {
-    document.removeEventListener('mousemove', mouseMoveHandler);
-    document.removeEventListener('mouseup', mouseUpHandler);
-};
+const mouseUp = () => {
+   document.removeEventListener('mousemove', mouseMoveHandler);
+}
 
+ document.addEventListener('mouseup', mouseUp);
 dragElement.addEventListener('mousedown', mouseDownHandler);
+
 
 
 // Open and close Internet Explorer
