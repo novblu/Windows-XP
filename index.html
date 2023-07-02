@@ -11,32 +11,47 @@
 
 <body>
 
-<!-- TASKBAR -->
+    <!-- TASKBAR -->
 
     <nav class="bottom-taskbar">
 
-        <div class="taskbar-items left">
+        <div class="bottom-taskbar_table left">
+
             <div class="start-menu">
-                <div class="menu hide">
-                    <header>
+                <div class="start-menu_open hide">
+
+                    <header class="start-menu_header">
                         <img class="header-pfp" src="./img/profile-pic.jpg" alt="">
-                        <p class="header-pfp-user">Kacpi Bacpi</p>
+                        <p class="header-name">Kacpi Bacpi</p>
                     </header>
-                    <section>
-                        <div class="menu_left">
+
+                    <section class="start-menu_section">
+
+                        <div class="start-menu_section-left">
+                            <div class="start-menu_section-left_table">
+                                <div class="start-menu_section-left_table-item   start-menu_left-item-explor">
+                                    <img src="./img/explorer.png" alt="">
+                                    <p>Internet Explorer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="start-menu_section-right">
 
                         </div>
-                        <div class="menu_right">
 
-                        </div>
                     </section>
-                    <footer></footer>
+
+                    <footer class="start-menu_footer">
+
+                    </footer>
                 </div>
             </div>
-            <img class="img-start" src="./img/start.png" alt="">
+
+            <img class="start-menu-img" src="./img/start.png" alt="">
         </div>
-        
-        <div class="taskbar-items right">
+
+        <div class="bottom-taskbar_table right">
             <div class="clock">
                 <span class="hrs">00</span>
                 <span>:</span>
@@ -46,45 +61,45 @@
     </nav>
 
 
-<!-- DESKTOP -->
+    <!-- DESKTOP -->
 
-    <header class="main-desktop">
-        <div class="icon-table">
-            <div class="icon-item icon-item-explor">
-                <img src="./img/explorer.png" alt="">
-                <p>Internet Explorer</p>
+    <header class="desktop">
+        <div class="desktop_table">
+            <div class="desktop_table-item desktop_table-item--explor">
+                <img class="" src="./img/explorer.png" alt="">
+                <p class="app-text-explor">Internet Explorer</p>
             </div>
-            <div class="icon-item">
+            <div class="desktop_table-item">
                 <img src="./img/explorer.exe_14_252-4.png" alt="">
                 <p>Folder</p>
             </div>
-            <div class="icon-item">
-                <a href=""><img src="./img/wordpad.exe_14_128-2.png" alt=""></a>
+            <div class="desktop_table-item">
+                <img src="./img/wordpad.exe_14_128-2.png" alt="">
                 <p>Notatnik</p>
             </div>
-            <div class="icon-item">
-                <a href=""><img src="./img/paint.png" alt=""></a>
+            <div class="desktop_table-item">
+                <img src="./img/paint.png" alt="">
                 <p>Paint</p>
             </div>
         </div>
 
 
-<!-- INTERNET EXPLORER APP -->
+        <!-- INTERNET EXPLORER APP -->
 
-        <div class="internet-exp ">
-            <div class="app-border" id="appHeader">
-                <div class="app-name">
+        <div class="IE-APP hide">
+            <div class="app_border" id="appHeader">
+                <div class="app_border-name">
                     <img class="app-name-img" src="./img/explorer.png" alt="">
                     <p class="app-name-para">Internet Explorer</p>
                 </div>
-                <div class="app-buttons">
+                <div class="app_border_buttons">
                     <button class="header_button header_button-min"></button>
                     <button class="header_button header_button-max"></button>
                     <div class="header_button header_button-close"></div>
                 </div>
             </div>
-            <div class="app-nav">
-                <div class="app-top-nav">
+            <div class="app_nav">
+                <div class="app_nav-top">
                     <a href="">File</a>
                     <a href="">Edit</a>
                     <a href="">View</a>
@@ -92,34 +107,27 @@
                     <a href="">Tools</a>
                     <a href="">Help</a>
                 </div>
-                <div class="app-mid-nav">
-                    <div class="arrows">
+                <div class="app_nav-mid">
+                    <div class="app_nav-mid-arrows">
                         <img src="./img/xp-arrow-icon-previous.png" alt="">
                         <p>Back</p>
                         <img src="./img/xp-arrow-icon-next.png" alt="">
                     </div>
-                    <div class="separator"></div>
+                    <div class="app_nav-separator"></div>
                     <img src="./img/refresh-ie.png" alt="">
                     <img src="./img/refresh2-ie.png" alt="">
-                    <div class="separator"></div>
-                    <div class="search">
+                    <div class="app_nav-separator"></div>
+                    <div class="app_nav-mid-search">
                         <img src="./img/pobrane.png" alt="">
                         <p>Search</p>
                     </div>
                 </div>
-                <div class="app-bottom-nav">
+                <div class="app_nav-bottom">
 
                 </div>
             </div>
             <div class="exp-section"></div>
         </div>
-
-
-
-
-
-
-
 
     </header>
 </body>

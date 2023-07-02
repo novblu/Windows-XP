@@ -1,7 +1,7 @@
-// Start Button
+// Start menu 
 
-const startMenuBtn = document.querySelector('.img-start')
-const startMenu = document.querySelector('.menu')
+const startMenuBtn = document.querySelector('.start-menu-img')
+const startMenu = document.querySelector('.start-menu_open')
 
 // Clock
 
@@ -10,15 +10,21 @@ let mins = document.querySelector('.mins')
 
 // Open and close Internet Explorer
 
-const openAppExplor = document.querySelector('.icon-item-explor')
-const closeAppExplor = document.querySelector('.header_button-close')
-const explorApp = document.querySelector('.internet-exp')
+const openAppExplor = document.querySelector('.desktop_table-item--explor') // Open IE from Dekstop
+const openMenuAppExplor = document.querySelector('.start-menu_left-item-explor') // Open IE from start menu
+const closeAppExplor = document.querySelector('.header_button-close') // close IE
+const explorApp = document.querySelector('.IE-APP') // IE whole app element
+const explorIconColor = document.querySelector('.desktop_table-item--explor') // IE icon on desktop
+const explorIconTextColor = document.querySelector('.app-text-explor') // Ie text on dekstop
 
 // Draggable App *BUGGED AF*
 
 const dragElement = document.getElementById('appHeader')
-const Element = document.querySelector('.internet-exp')
+const Element = document.querySelector('.IE-APP')
 
+let x = 0;
+let y = 0;
+let active =true
 
 // Start menu
 
@@ -26,12 +32,13 @@ const showMenu = () => {
     startMenu.classList.toggle('hide')
 }
 
+const closeMenu = () => {
+    startMenu.classList.add('hide')
+}
+
 
 // Draggable App *BUGGED*
                                                                         
-let x = 0;
-let y = 0;
-let active =true
 
 const mouseDownHandler = function (e) {
     x = e.offsetX;
@@ -68,6 +75,12 @@ dragElement.addEventListener('mousedown', mouseDownHandler);
 
 const OpenExplorApp = () => {
     explorApp.classList.remove('hide')
+    explorIconColor.classList.remove('clicked-icon')
+    explorIconTextColor.classList.remove('clicked')
+}
+const firstIconClick = () => {
+    explorIconColor.classList.toggle('clicked-icon')
+    explorIconTextColor.classList.toggle('clicked')
 }
 const closeExplorApp = () => {
     explorApp.classList.add('hide')
@@ -87,6 +100,17 @@ setInterval(() =>{
     }
 },1000)
 
+
+// Show start menu
+
 startMenuBtn.addEventListener('click', showMenu)
-openAppExplor.addEventListener('dblclick', OpenExplorApp)
+
+// Explorer
+
+openAppExplor.addEventListener('click', firstIconClick) // first click making icon blue
+openAppExplor.addEventListener('dblclick', OpenExplorApp) // opening explor from icon on dekstop
+openMenuAppExplor.addEventListener('click', OpenExplorApp) // opening explor from start menu
+openMenuAppExplor.addEventListener('click', closeMenu) // closing menu after clicking app in start menu
+
+// close app
 closeAppExplor.addEventListener('click', closeExplorApp)
